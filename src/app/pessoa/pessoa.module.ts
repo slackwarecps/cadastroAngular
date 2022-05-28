@@ -8,6 +8,5 @@ import { PessoaComponent } from './pessoa.component';
 @NgModule({
   declarations: [PessoaComponent],
   imports: [CommonModule, PessoaRoutingModule, AppMaterialModule],
-  exports: [PessoaComponent],
 })
 export class PessoaModule {}
