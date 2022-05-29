@@ -18,7 +18,7 @@ export class PessoasService {
   list() {
     return this.httpClient.get<Pessoa[]>(`${API}`).pipe(
       first(),
-      delay(5000),
+      //delay(5000),
       tap((listaDePessoas) => console.log(listaDePessoas))
     );
   }

@@ -17,7 +17,13 @@
       <!-- Idade Column -->
       <ng-container matColumnDef="idade">
         <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let pessoa">{{ pessoa.idade }}</td>
+        <td mat-cell *matCellDef="let pessoa">
+          {{ pessoa.idade }}
+
+          <mat-icon aria-hidden="false" aria-label="Example home icon">{{
+            pessoa.idade | categoria
+          }}</mat-icon>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
