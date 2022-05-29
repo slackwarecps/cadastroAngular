@@ -1,5 +1,7 @@
 [
       { "id": 1, "nome": "Fabio Alvaro Pereira", "idade": 43 },
       { "id": 2, "nome": "Tatiana Vercelino Favoretti", "idade": 43 },
-      { "id": 3, "nome": "Isabela Pereira", "idade": 17 }
+      { "id": 3, "nome": "Isabela Pereira", "idade": 17 },
+      { "id": 4, "nome": "Nutella", "idade": 4 },
+      { "id": 5, "nome": "Tiao", "idade": 4 }
 ]
