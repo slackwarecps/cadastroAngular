@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from '../shared/shared.module';
 import { PessoaRoutingModule } from './pessoa-routing.module';
 import { PessoaComponent } from './pessoa.component';
 
 @NgModule({
   declarations: [PessoaComponent],
-  imports: [CommonModule, PessoaRoutingModule, AppMaterialModule],
+  imports: [CommonModule, PessoaRoutingModule, AppMaterialModule, SharedModule],
 })
 export class PessoaModule {}
