@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pessoa } from 'src/app/model/pessoa';
-import { first, tap } from 'rxjs/operators';
+import { delay, first, tap } from 'rxjs/operators';
 
 const API = '/assets/pessoas.json';
 
@@ -18,6 +18,7 @@ export class PessoasService {
   list() {
     return this.httpClient.get<Pessoa[]>(`${API}`).pipe(
       first(),
+      delay(5000),
       tap((listaDePessoas) => console.log(listaDePessoas))
     );
   }

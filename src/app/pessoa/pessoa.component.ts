@@ -10,7 +10,7 @@ import { PessoasService } from './services/pessoas.service';
   styleUrls: ['./pessoa.component.css'],
 })
 export class PessoaComponent implements OnInit {
-  public pessoas: Observable<Pessoa[]>;
+  public pessoas$: Observable<Pessoa[]>;
 
   public pessoas3: Pessoa[] = [];
 
@@ -22,7 +22,7 @@ export class PessoaComponent implements OnInit {
   displayedColumns = ['nome', 'idade'];
 
   constructor(private pessoasService: PessoasService) {
-    this.pessoas = this.pessoasService.list();
+    this.pessoas$ = this.pessoasService.list();
   }
 
   ngOnInit(): void {}
