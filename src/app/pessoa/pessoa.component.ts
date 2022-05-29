@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Pessoa } from './../model/pessoa';
 import { PessoasService } from './services/pessoas.service';
@@ -9,7 +10,9 @@ import { PessoasService } from './services/pessoas.service';
   styleUrls: ['./pessoa.component.css'],
 })
 export class PessoaComponent implements OnInit {
-  public pessoas: Pessoa[] = [];
+  public pessoas: Observable<Pessoa[]>;
+
+  public pessoas3: Pessoa[] = [];
 
   public pessoas2: Pessoa[] = [
     { id: 1, nome: 'Fabio Alvaro Pereira', idade: 43 },
@@ -19,9 +22,7 @@ export class PessoaComponent implements OnInit {
   displayedColumns = ['nome', 'idade'];
 
   constructor(private pessoasService: PessoasService) {
-    //this.pessoas = [];
-    // this.pessoasService = new PessoasService();
-    this.pessoas = pessoasService.list();
+    this.pessoas = this.pessoasService.list();
   }
 
   ngOnInit(): void {}
