@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Pessoa } from 'src/app/model/pessoa';
 import { delay, first, tap } from 'rxjs/operators';
 
-const API = 'api/courses';
+const API = 'api/empresas';
 const API2 = '/assets/pessoas.json';
 
 @Injectable({
